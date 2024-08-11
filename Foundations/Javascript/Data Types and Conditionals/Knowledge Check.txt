@@ -1,0 +1,70 @@
+What are the eight data types in JavaScript?
+-> Int , BigInt , String , Boolean , Null , undefined , object ,symbol .
+
+Which data type is NOT primitive?
+-> Objects and Symbols | The symbol type is used to create unique identifiers for objects.
+
+What is the relationship between null and undefined?
+-> null is used to assign a variable that is nothing/empty | undefined is just like null but it means value its yet to be assigned
+
+What is the difference between single, double, and backtick quotes for strings?
+-> single quotes and doubles are used interchangebly | backtick `` are used to embed variables or strings inside a string
+
+What is the term for joining strings together?
+-> dollar sign {variable} | `${}` 
+
+Which type of quote lets you embed variables/expressions in a string?
+-> backtick
+
+How do you embed variables/expressions in a string?
+-> We embed variable/expressions inside a string by 
+1. Define the string inside backtick 
+2 . Use ${variable/expressions} to include them inside the string 
+
+How do you use escape characters in a string?
+-> inside single quote string using double quotes or vice versa 
+What is the difference between the slice/substring/substr string methods?
+->   slice             |        substring |            substr
+supports +/- indexing   | Doesn't support   | supports
+start to end index          start to end        start and Length index
+
+What are the three logical operators, and what do they stand for?
+-> 3 Logical operators are AND , OR , NOT  | && ,||,!
+
+What are the comparison operators?
+-> Comparison operators in js are operator used to compare between two or more variable/expressions 
+There includes == , === , <= , >= , < , > , !=
+
+What are truthy and falsy values?
+-> Truthy means a value that can/may be true but is not yet check/known 
+-> Falsy  means a value that can/may be false but is not yet check/known 
+
+What are the falsy values in JavaScript?
+-> false , 0 , -0 , "" , null ,undefined , NaN
+
+What are conditionals?
+-> conditonals are question statements and used carry out tasks only if certain conditions are met. 
+
+What is the syntax for an if/else conditional?
+->if (conditon) {
+    // if true do this 
+}
+else {
+    // false so do this
+}
+What is the syntax for a switch statement?
+->switch (expression) {
+    case X:
+        // if x then do this 
+        break;
+    case Y:
+        // if y then do this 
+        break;
+    default:
+        // if not x or y do this
+}
+What is the syntax for a ternary operator?
+-> condition ? run this code : run this code instead
+
+What is nesting?
+-> Executing block of code where multiple elements are inside one another in a tree like fashion is nesting
