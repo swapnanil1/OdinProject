@@ -1,0 +1,106 @@
+A function declaration looks like this:
+
+function name(parameters, delimited, by, comma) {
+  /* code */
+}
+Values passed to a function as parameters are copied to its local variables.
+A function may access outer variables. But it works only from inside out. The code outside of the function doesn’t see its local variables.
+A function can return a value. If it doesn’t, then its result is undefined.
+To make the code clean and easy to understand, it’s recommended to use mainly local variables and parameters in the function, not outer variables.
+
+It is always easier to understand a function which gets parameters, works with them and returns a result than a function which gets no parameters, but modifies outer variables as a side effect.
+
+Function naming:
+
+A name should clearly describe what the function does. When we see a function call in the code, a good name instantly gives us an understanding what it does and returns.
+A function is an action, so function names are usually verbal.
+There exist many well-known function prefixes like create…, show…, get…, check… and so on. Use them to hint what a function does.
+Functions are the main building blocks of scripts. Now we’ve covered the basics, so we actually can start creating and using them. But that’s only the beginning of the path. We are going to return to them many times, going more deeply into their advanced features.
+
+Function expressions:
+Like this:
+let sayHi = function() {
+  alert( "Hello" );
+};
+**********************************************************************************
+Arrow functions, the basics
+
+There’s another very simple and concise syntax for creating functions, that’s often better than Function Expressions.
+It’s called “arrow functions”, because it looks like this:
+
+let func = (arg1, arg2, ..., argN) => expression;
+This creates a function func that accepts arguments arg1..argN, then evaluates the expression on the right side with their use and returns its result.
+
+It's a shorter example of this:- 
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+Multiline arrow functions
+The major difference is that curly braces require a return within them to return a value (just like a regular function does).
+
+Like this:
+
+let sum = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+
+alert( sum(1, 2) ); // 3
+**********************************************************************************
+Javascript Call Stack
+
+The call stack works based on the last-in-first-out (LIFO) principle.
+For example:-
+function add(a, b) {
+    return a + b;
+}
+
+function average(a, b) {
+    return add(a, b) / 2;
+}
+
+let x = average(10, 20);
+
+inside the stack we always have the main fn . Then here average is pushed inside . next to calculate average , add() is called . 
+This pushes add to the stack so from top to bottom of the stack we have add()-average()-main().
+when add() fn is done calculating the add is popped of the stack leaving average()-main)
+The value returned form the add() is used to calculate the average function and when done aveage is popped too.
+
+**********************************************************************************
+
+Summary
+Functions are values. They can be assigned, copied or declared in any place of the code.
+If the function is declared as a separate statement in the main code flow, that’s called a “Function Declaration”.
+If the function is created as a part of an expression, it’s called a “Function Expression”.
+Function Declarations are processed before the code block is executed. They are visible everywhere in the block.
+Function Expressions are created when the execution flow reaches them.
+In most cases when we need to declare a function, a Function Declaration is preferable, because it is visible prior to the declaration itself. That gives us more flexibility in code organization, and is usually more readable.
+
+So we should use a Function Expression only when a Function Declaration is not fit for the task. We’ve seen a couple of examples of that in this chapter, and will see more in the future.
+
+
+
+**********************************************************************************
+Questions & Answers
+
+*What are functions useful for?
+breaking down code into smaller compartments , using functions help to keep code organized and easier to debug
+*How do you invoke a function?
+FunctionName();
+*What are anonymous functions?
+anonymous functions are functions with no names like:-
+function(){
+  alert("I love Dogs")
+}
+*What is function scope?
+Function scope implies that any variable created inside a function is not accessable to outside code
+But variable declared in the main function are available to the the function 
+Its like principal of the school has access to his office and all other classrooms but students does  not have access to principal office.
+here principal is the function and students are rest of the program
+*What are return values?
+Return values in functions are generally used to return result of a function . 
+using return statement stops the execution of the function .
+often used to stop execution midway if conditions are satisfied saving resources and memory .
+*What are arrow functions?
+A new one liner way of writing small functions. Often this methord is consider fast and lasy. 
+
