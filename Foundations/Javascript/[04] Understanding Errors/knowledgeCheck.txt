@@ -1,0 +1,11 @@
+*What are three reasons why you may see a TypeError?
+Wrong or incomplete operand or argument is passed to any function . wrong datatype passed .
+Attempt to modify any const or null value 
+attempt to use any value in improper way
+*What is the key difference between an error and a warning?
+Errors will halt the compilation of the program untill fixed
+Warning will not halt the compilation and can be fixed later down the development 
+*What is one method you can use to resolve an error?
+try() and catch()
+try is used to experiment with a possible expression that might lead to an error but one can't say for sure
+if error is found the catch() method is executed with normally has a backup expression that is will work
