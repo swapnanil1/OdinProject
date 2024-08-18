@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let answer = parseInt(
+        prompt("Please enter the number you would like to FizzBuzz up to: ")
+      );
+      // practicing ternary operator
+      for (let i = 1; i <= answer; i++) {
+        console.log(
+          i % 3 === 0 && i % 5 === 0
+            ? "FizzBizz"
+            : i % 3 === 0
+            ? "Fizz"
+            : i % 5 === 0
+            ? "Bizz"
+            : i
+        );
+      }
+    </script>
+  </body>
+</html>

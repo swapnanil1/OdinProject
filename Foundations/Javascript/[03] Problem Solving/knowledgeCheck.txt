@@ -1,0 +1,116 @@
+How to think like a programmmer ?
+*What is programming?
+Computers are dumb . They really are ! Most misunderstood thing about programming is that it's coding/languages, It is NOT .
+Programming is about making the dumb computer do clever things .
+Programming is a way of how one should think . A way how one should solve problems, not memorize syntax .
+
+*what Programming languages to use?
+Theres multiple programming languages to use and some will you feel like a wizard or absolute dummy as a beginner. 
+At the end of the day it really does'nt matter what language you use as mostly what ever language you use will more or less have the same functionality, 
+it just differ on the syntax. 
+
+*Why use programming languages?
+really one has to understand the programming languages are much more simple then traditonal language . Theres hundred thousands of words in english dictionary.
+In a programming language theres hardly hundred words/keywords to know.
+Code never lies
+
+*How to solve problems?
+Most common mistake if one is stuck at a problem is to blame the syntax . "Oh the code is not write here . Oh the code is wrong here " .
+Well most of the time the really problem is we don't really understand the problem that we are trying to solve.
+
+*Comments in programming ?
+Mostly comments are to explain code to other developers or ourselves.
+But for a beginner thats not true . for beginners "Code explains the comments to the computer"
+Think about it for a moment .)
+
+* What is pseudocode and why use it ?
+The Process of writing a step by step algorithm is simple english to build proper understanding of the problem we are trying to solve is pseudocode.
+pseudocode often uses six programming keywords - SEQUENCE WHILE REPEAT-UNTIL FOR IF-THEN-ELSE CASE
+SEQUENCE -
+INPUT => READ OBTAIN GET
+OUTPUT => PRINT DISPLAY SHOW
+COMPUTE => COMPUTE CALCLULATE DETERMINE 
+
+FOR - 
+FOR iteration bounds
+ENDFOR condition
+
+WHILE - 
+WHILE condition true
+ENDWHILE condition false
+
+REPEAT something 
+UNTIL condition
+
+CASE - 
+CASE expression OF 
+condition 1: Sequence 1
+condition 2: Sequence 2
+default: ENDCASE
+
+IF-THEN-ELSE - 
+IF condition THEN
+    SEQUENCE 1
+ELSE 
+    SEQUENCE 2 
+ENDIF
+
+why use it?
+Pseudocode Is Easier to Read
+Pseudocode Simplifies Code Construction
+Pseudocode Is a Good Middle Point Between Flowchart and Code
+Pseudocode Allows for Quick Bug Detection
+Pseudocode Is  a Helpful Starting Point for Documentation
+
+*What are the three stages in the problem solving process?
+3 step to solve a problem 
+Plan - What is user input and what is desired output
+Pseudocode - Write out the logic helps to solve most of the problem and avoid pain down the line
+Divide and conquer - Break the problem into simple steps and solve one step at a time
+
+*Why is it important to clearly understand the problem first?
+The first step to solving a problem is understanding exactly what the problem is.
+If you don’t understand the problem, you won’t know when you’ve successfully solved it and may waste a lot of time on a wrong solution.
+
+*What can you do to help get a clearer understanding of the problem?
+To gain clarity and understanding of the problem, write it down on paper, reword it in plain English until it makes sense to you, and draw diagrams if that helps. 
+When you can explain the problem to someone else in plain English, you understand it.
+
+*What are the advantages of breaking a problem down and solving the smaller problems?
+Many beginners try to solve the big problem in one go. Don’t do this. If the problem is sufficiently complex, you’ll get yourself tied in knots and make life a lot harder for yourself. 
+Decomposing problems into smaller and easier to solve subproblems is a much better approach.
+Decomposition is the main way to deal with complexity, making problems easier and more approachable to solve and understand.
+
+
+
+*Always Have a Plan
+*Restate the Problem
+*Divide the Problem
+
+*Start with What You Know
+The “start with what you know” maxim also applies in cases where you
+haven’t divided the problem.
+
+*Reduce the Problem
+when faced with a problem you are unable to solve, you
+reduce the scope of the problem, by either adding or removing constraints,
+to produce a problem that you do know how to solve
+
+*Look for Analogies
+An analogy, for our purposes, is a similarity between a current problem and a
+problem already solved that can be exploited to help solve the current problem.
+Most analogies are not that direct. Sometimes the similarity concerns
+only part of the problems.
+
+*Don’t Get Frustrated
+Avoiding frustration is a decision you must make. How-
+ever, there are some thoughts you can employ that will help. First of all, never
+forget the first rule, that you should always have a plan, and that while writing
+code that solves the original problem is the goal of that plan, it is not the only
+step of that plan. Thus, if you have a plan and you’re following it, then you
+are making progress and you must believe this. If you’ve run through all the
+steps on your original plan and you’re still not ready to start coding, then it’s
+time to make another plan.
+lso, when it comes down to getting frustrated or taking a break, you
+should take a break. One trick is to have more than one problem to work on
+so that if this one problem has you stymied, you can turn your efforts elsewhere.
