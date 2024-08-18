@@ -15,7 +15,7 @@ In a programming language theres hardly hundred words/keywords to know.
 Code never lies
 
 *How to solve problems?
-Most common mistake if one is stuck at a problem is to blame the syntax . "Oh the code is not write here . Oh the code is wrong here " .
+Most common mistake if one is stuck at a problem is tO blame the syntax . "Oh the code is not write here . Oh the code is wrong here " .
 Well most of the time the really problem is we don't really understand the problem that we are trying to solve.
 
 *Comments in programming ?
