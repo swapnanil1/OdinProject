@@ -1,0 +1,41 @@
+*** Why is it important to write clean code?
+Most of a developer's time is spent on reading code rather than writing. Writing Clean Code help with that.
+It helps for other developers to under your code faster and in a more efficient manner.
+It helps us as we as human often forget thing so checking in code writen a month back will make more sense!.
+
+*** What are some good principles for keeping code clean?
+1. Revise Your Logic Before Coding
+2. Clearly Expose the Structure of the Page 
+3. Use the Correct Indentation | use extensions to do so
+4. Write Explanatory Comments | helpfull for writing documentaion 
+5. Avoid Abusing Comments
+6. Avoid Extremely Large Functions | Break up large functions into smaller ones
+7. Use Naming Standards for Functions and Variables | use of camelCase , UPPERCASE for const are few examples
+8. Treat Changes with Caution
+9. Avoid Indiscriminate Mixing of Coding Languages
+10. Summarize Your Imports
+
+*** What is the difference between good comments and bad comments?
+Good Comments 
+Only add comment when necessory to explain something . often writing clean code we try to make the code self-explanatory.
+Keeping the correct indentations
+Respecting standards in use. To use the same coding practices inside the organization . This makes reading your colleague code easier and faster
+
+Bad Comment 
+Disrepect someone on an issue . 
+Not fixing something and saying someone else will do it.
+
+*** Some good things to keep in mind while naming variables & functions :-
+Always try start a FUNCTION name using a verb | This helps to know what the fn does .
+->For example 
+function getUserScore();
+or 
+fetchPlayerName();
+or 
+function retrievePlayer1Tag();
+
+Always try start a VARIABLE name using a noun/adjective | This helps to know what the variable stores.
+-> For exmaple
+const numberOfThings = 10;
+const myName = "Thor";
+const selected = true;
