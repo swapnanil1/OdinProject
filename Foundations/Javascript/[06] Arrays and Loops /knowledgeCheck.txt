@@ -1,3 +1,43 @@
+** What is an array?
+An array is a special variable aka data structure, which can hold more than one value:
+** What are arrays useful for?
+Arrays are used to store multiple variab4
+** How do you access an array element?
+const cars = ["Saab", "Volvo", "BMW"]; 
+let car = cars[0];
+name of the array with a [] third bracket to specify the index
+** What are some useful array properties?
+The real strength of JavaScript arrays are the built-in array properties and methods
+cars.length   // Returns the number of elements
+cars.sort()   // Sorts the array 
+** What are some useful array methods?
+Array length
+Array toString()
+Array at()
+Array join()
+Array pop()
+Array push()
+Array shift()
+Array unshift()
+Array delete()
+Array concat()
+Array copyWithin()
+Array flat()
+Array splice()
+Array toSpliced()
+Array slice()
+** What are loops useful for?
+Loops are all about doing the same thing over and over again. 
+Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
+** What is the break statement?
+Stop a loops execution if certain conditions are met .
+** What is the continue statement?
+stop the loops execution for just the current iteration and moves to the next iteration
+** What is the advantage of writing automated tests?
+Automated test is a coding practice to check if the project/product/code you want to build 
+performs according to standard 
+
+
 How to Create an Array in JavaScript
 const myArray = ["Cat", "Dogs", "Goat"];
 
