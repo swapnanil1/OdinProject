@@ -1,0 +1,55 @@
+** Differences between objects and primitives
+Primitives can store only one type of data
+Objects are dynamic and allow storage of complex data types
+Primitives are stored as copy by value in nature .
+Objects are stored as direct reference . So changing a child object that points/derived form a parent object also changes the parent object,
+    but not vice versa for example, 
+    let parent = { species: "dog" };
+    let child = parent;
+    parent = { species: "cat" };
+    console.log(parent); // { species: "cat" }
+    console.log(child); // { species: "dog" }
+
+** Using js array inbuilt methods | or i say a fancy way/method of solving array programs/problems using less words.
+*Map method 
+map method of array expects a callback function as an argument i.e it expects a function as argument the MUST return something .
+map method automatically iterate the entire array and performs the said function on every element .
+map method does not effect the original array.
+    for example
+    function addOne(num) {
+        return num + 1;
+        }
+    const arr = [1, 2, 3, 4, 5];
+    const mappedArr = arr.map(addOne);
+    console.log(mappedArr); // Outputs [2, 3, 4, 5, 6]
+
+*filter method
+filter is similar to map . it still does iterate over all the elements of the array.
+filter method accepts a callback function that only returns true or false.
+filter method then traverses and check if the said element when passed into the function returns true or false. 
+    if true then filter method keeps the said element as is 
+    if false then rejects the said element.
+    for example
+    function isOdd(num) {
+        return num % 2 !== 0;
+        }
+    const arr = [1, 2, 3, 4, 5];
+    const oddNums = arr.filter(isOdd);
+    console.log(oddNums); // Outputs [1, 3, 5];
+    console.log(arr); // Outputs [1, 2, 3, 4, 5], original array is not affected
+
+*reduce method
+just like map and filter reduce also traverses all the elements of the array.
+reduce actually accepts TWO arguments as inputs, first argument is called accumulator , second argument is called inital value .
+accumulator is the result of the function upto said element of the array . 
+(accumulator basically is the sum=0 , or multi = 1 we declare in programs that later holds the result of the program by performing operations on it) 
+inital value is basically inital element that accumulator accepts as the first element; so if asked find sum of all array elements , you need to set sum = 0 right? so that 0 has to be set as the inital value i.e the second argument. other than that inital value has no other use .
+    For example
+    const arr = [1, 2, 3, 4, 5];
+    const productOfAllNums = arr.reduce((total, currentItem) => {
+    return total * currentItem;
+    }, 1);
+    console.log(productOfAllNums); // Outputs 120;
+    console.log(arr); // Outputs [1, 2, 3, 4, 5]
+
+    

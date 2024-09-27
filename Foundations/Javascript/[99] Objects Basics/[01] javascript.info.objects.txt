@@ -1,0 +1,75 @@
+A object data type in JavaScript is a keyed collection of various data.
+A object is ALWAYS inside {...}.
+A object represents a "key:value" pair.
+A object example
+        let user = new Object();
+        let user = {};
+        // same thing
+        // adding properties to user
+        let user = {     // an object
+        name: "John",   // by key "name" store value "John"
+        age: 30        // by key "age" store value 30
+        };
+        Here in "user" object there are two properties
+        The Key:Value Pair Together is called a property
+
+To access value of a property inside an object we use dot operator 
+    Like this
+    alert(user.name);
+    alert(user.age);
+    // object.key 
+
+To add a property outside of object declaration
+    user.isAdmin = false;
+    // isAdmin = false is added to user
+
+To delete a property of an object 
+    delete user.age;
+    // delete is reserved keyword 
+
+To access/add/delete a multi-worded property inside any object 
+    we use Third Brackets Like so 
+    let user = {};
+    //set 
+    user["has kids"] = true;
+    // get
+    alert(user["has kids"]); //true
+    // delete
+    delete user["has kids];
+    // we could also store the multi worded property inside a variable
+    let key = "had kids"
+    user[key] = true;
+
+Property name restrictions
+    we can't use reserved keywords like for let as variable names but for a object's property the are allowed
+    let obj = {
+        for: 1,
+        let: 2,
+        return: 3
+    };
+    alert (obj.for+obj.let+obj.return) // 6
+
+"In" operator for checking existence
+    in is used to check if a property is defined or not
+    let user = {
+        isLive
+    };
+    alert("isLive" in user) // True 
+
+"for..in" loop for iterate object
+    for(key in object) {
+
+    }
+    // example
+    let user = {
+        name: "John",
+        age: 30,
+        isAdmin: true
+        };
+
+for (let key in user) {
+  // keys
+  alert( key );  // name, age, isAdmin
+  // values for the keys
+  alert( user[key] ); // John, 30, true
+}
