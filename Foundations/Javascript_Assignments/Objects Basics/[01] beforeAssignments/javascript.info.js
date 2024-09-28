@@ -4,7 +4,7 @@ user.name = "John";
 user.surname = "Smith";
 user.name = "Pete";
 delete user.name;
-// Check for emptiness
+// CHECK FOR EMPTINESS
 // Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
 function isEmpty(object) {
   for (key in object) {

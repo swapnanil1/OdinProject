@@ -43,7 +43,7 @@ just like map and filter reduce also traverses all the elements of the array.
 reduce actually accepts TWO arguments as inputs, first argument is called accumulator , second argument is called inital value .
 accumulator is the result of the function upto said element of the array . 
 (accumulator basically is the sum=0 , or multi = 1 we declare in programs that later holds the result of the program by performing operations on it) 
-inital value is basically inital element that accumulator accepts as the first element; so if asked find sum of all array elements , you need to set sum = 0 right? so that 0 has to be set as the inital value i.e the second argument. other than that inital value has no other use .
+inital value is basically first element that accumulator accepts as the first element; so if asked find sum of all array elements , you need to set sum = 0 right? so that 0 has to be set as the inital value i.e the second argument. other than that inital value has no other use .
     For example
     const arr = [1, 2, 3, 4, 5];
     const productOfAllNums = arr.reduce((total, currentItem) => {
