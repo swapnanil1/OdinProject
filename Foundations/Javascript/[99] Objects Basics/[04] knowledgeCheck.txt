@@ -74,7 +74,7 @@ let evenArr = arr.filter((ele)=>{
 ## What is Array.prototype.reduce() useful for?
 .reduce() is commonly used when we want to produce a SINGLE result out of an array . Like sum of all numbers . It also accept a callback function .
 .reduce() the callback function takes two argument first is accumulator and second is currentValue .
-accumulator is the result of our reduce . It is the element that stores the sum of all numbers and is passed on every iteration.
+accumulator is the result of our reduce . It is the element that stores the sum of all numbers and is passed on every iteration. the returned value is passed inside the accumulator after each iteration.
 accumulator can also be initialized . For example to fetch the sum of all elements inside array you want it initalized as zero .For factorial of all ele in arr you want it to be initallize as one.
 currentValue is the current value of the ele that is getting iterated on .
 callback function is followed by the initallize value of accumulator. It's optional and if not added inital value is taken as the first element and current value is taken as the second element of the object.
