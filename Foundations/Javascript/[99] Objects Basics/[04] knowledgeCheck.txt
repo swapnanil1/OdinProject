@@ -1,0 +1,89 @@
+## What is the difference between objects and arrays?
+Objects are arrays with special features . These objects are created using {} and data stored follow a key-value format.
+You can also delete properties with the delete operator and check for their existence using the "key" in obj syntax. 
+Iteration over an object is commonly performed using a for...in loop.
+## How do you access object properties?
+we access objects properites using the dot operator .
+
+## How do primitives and object types differ when you assign them to other variables, or pass them into functions?
+# Assignment to Other Variables:
+
+Primitives: When you assign a primitive value to another variable, a copy of the value is created. This means that changes to the new variable do not affect the original variable.
+For Example:-
+let num = 42;   // num holds the primitive value 42
+let numCopy = num; // numCopy is a copy of num's value (42)
+numCopy = 43; // Changing numCopy does not affect num
+
+console.log(num); // 42
+console.log(numCopy); // 43
+
+Objects: When you assign an object to another variable, a reference to the same object is assigned. This means that changes made to the new variable will affect the original object.
+For example:-
+const obj = { data: 42 }; // obj holds a reference to the object
+const objCopy = obj; // objCopy references the same object as obj
+objCopy.data = 43; // Changing objCopy affects the object that obj refers to
+
+console.log(obj); // { data: 43 }
+console.log(objCopy); // { data: 43 }
+
+# Passing into Functions:
+
+Primitives: When a primitive is passed into a function, a copy of the value is made. So, if the function modifies the parameter, it does not affect the original variable outside the function.
+function modifyPrimitive(val) {
+    val = 100; // modifies the local copy
+}
+
+let originalValue = 42;
+modifyPrimitive(originalValue);
+console.log(originalValue); // 42 (remains unchanged)
+
+Objects: When an object is passed into a function, a reference to the object is passed. Therefore, if the function modifies the object, those changes will affect the original object outside the function.
+function modifyObject(obj) {
+    obj.data = 100; // modifies the object that was passed in
+}
+
+const originalObj = { data: 42 };
+modifyObject(originalObj);
+console.log(originalObj); // { data: 100 } (changes reflected)
+In summary, primitives are copied by value, while objects are copied by reference, leading to different behaviors when they are assigned to other variables or passed into functions.
+
+
+## What is Array.prototype.map() useful for?
+.map() is commonly used when we are going to transform an entire array i.e every element will change . 
+.map() takes a callback function as input
+let arr = [1,2,3,4,5] 
+if i want to increment all the elements by 1 , but don't want to write a big function to do so we use map
+let onePlusArr = arr.map((ele) => {
+    return ele+1;
+})
+.map() does not effect the orignal array
+
+## What is Array.prototype.filter() useful for?
+.filter() is commonly used to filter out elements i.e remove unwanted elements that don't satisfy our needs.
+let arr = [1,2,3,4,5]
+if want a the array of even numbers only i use filter
+let evenArr = arr.filter((ele)=>{
+    if(ele%2===0){
+        return ele;
+    }
+})
+
+.filter does not modifiy the orignal array
+
+
+## What is Array.prototype.reduce() useful for?
+.reduce() is commonly used when we want to produce a SINGLE result out of an array . Like sum of all numbers . It also accept a callback function .
+.reduce() the callback function takes two argument first is accumulator and second is currentValue .
+accumulator is the result of our reduce . It is the element that stores the sum of all numbers and is passed on every iteration.
+accumulator can also be initialized . For example to fetch the sum of all elements inside array you want it initalized as zero .For factorial of all ele in arr you want it to be initallize as one.
+currentValue is the current value of the ele that is getting iterated on .
+callback function is followed by the initallize value of accumulator. It's optional and if not added inital value is taken as the first element and current value is taken as the second element of the object.
+
+Syntax :- 
+let syntax = arr.reduce((accumulator,currentValue)=> { return operationDoneOnA&B;},initalValueOfAccumulator)
+
+For example
+  const arr = [1, 2, 3, 4, 5];
+    const productOfAllNums = arr.reduce((total, currentItem) => {
+    return total * currentItem;
+    }, 1);

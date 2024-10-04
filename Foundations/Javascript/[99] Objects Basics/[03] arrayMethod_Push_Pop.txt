@@ -1,7 +1,259 @@
+## Summary
+
+# Adding and Removing Elements:
+push(...items): Adds items to the end.
+pop(): Removes an item from the end.
+shift(): Removes an item from the beginning.
+unshift(...items): Adds items to the beginning.
+splice(pos, deleteCount, ...items): Deletes elements and inserts new ones at a specific position.
+slice(start, end): Creates a new array from elements between the start and end (end not included).
+concat(...items): Combines current array with other items or arrays into a new array.
+
+# Searching for Elements:
+indexOf/lastIndexOf(item, pos): Finds the index of an item, starting from a position.
+includes(value): Checks if the array has a specific value (returns true or false).
+find/filter(func): Finds the first/all elements that meet a condition defined by a function.
+findIndex: Similar to find, but returns the index of the found item.
+Iterating Over Elements:
+forEach(func): Executes a function for every element; does not return anything.
+
+# Transforming the Array:
+map(func): Creates a new array from results of applying a function to each element.
+sort(func): Sorts the array in place and returns it.
+reverse(): Reverses the array in place and returns it.
+split/join: Converts a string to an array and back.
+reduce/reduceRight(func, initial): Calculates a single value from the array by applying a function to each element.
+
+# Additional Methods:
+Array.isArray(value): Checks if a value is an array.
+some(fn): Returns true if at least one element meets the condition.
+every(fn): Returns true if all elements meet the condition.
+fill(value, start, end): Fills the array with a value between start and end.
+copyWithin(target, start, end): Copies elements from one position to another within the same array.
+flat(depth): Creates a new flat array from a multidimensional array.
+flatMap(fn): Applies a function to each element, then flattens the result.
+
+--------------------------------------------------------------------------------------------------------------------------
+
 ## ADD/REMOVE ITEMS
 #We already know methods that add and remove items from the beginning or the end:
 
-arr.push(...items) – adds items to the end,
-arr.pop() – extracts an item from the end,
+arr.push(...items) – ADDS items to the END,
+arr.pop() – extracts an item from the END,
 arr.shift() – extracts an item from the beginning,
 arr.unshift(...items) – adds items to the beginning.
+
+# splice method
+splice method is called the swiss army knife for arrays.
+it can do everything from insert remove to replace elements
+    Syntax
+    arr.splice(start[, deleteCount, elem1, ..., elemN])
+let arr = ["I", "study", "JavaScript"];
+arr.splice(1,1); // this means start from one and delete only one element
+
+let arr = ["I", "study", "JavaScript", "right", "now"];
+
+// remove 3 first elements and replace them with another
+arr.splice(0, 3, "Let's", "dance");
+alert( arr ) // now ["Let's", "dance", "right", "now"];
+
+// insert elements using splice 
+let arr = ["I", "study", "JavaScript"];
+arr.splice(2, 0, "complex", "language"); // inset at 2nd postion | 0 means insertion
+
+// arr.splice how it works 
+when arr.splice is called to remove elements it does two thing
+1st it removes the said elements and modify the original array passed.
+2nd arr.splice itself stored the removed elements only 
+For example 
+let number = [1,2,3,4,5]
+let removed = arr.splice(0,1) // removes 1 | also removed now contains the 1
+console.log(number) // [2,3,4,5]
+console.log(removed) // [1] 
+
+// negative indexning in splice
+let arr = [1,2,5]
+arr.splice(-1,0,3,4)
+console.log(arr) // [1,2,3,4,5]
+
+# SLICE method
+
+slice method takes two arguments start and end
+    SYNTAX arr.slice([start], [end])
+
+arr.slice(0,2) -> this means that delete from 0 to 2-1.
+
+arr.slice() without arguments just creates a copy of the array.
+
+# CONCAT method
+
+concat can accept entire arrays or individual values as arguments .
+concat returns a single array containing all data passed
+    For example :- 
+    let arr = [1, 2];
+    alert( arr.concat([3, 4]) ); // [1,2,3,4]
+    alert( arr.concat([3, 4], [5, 6]) ); // [1,2,3,4,5,6]
+    alert( arr.concat([3, 4], 5, 6) ); // takes array and values both
+
+# Searching in array (non objects)
+
+arr.indexOf and arr.includes
+These are methods used to check if a element includes the array by iterating over it with some internal optimizations
+.includes returns a bool value and accepts the "ele,from" where ele is to be searched and start search from what index.
+.indexOf returns the index of ele of found else return -1 . it also accepts "ele,from" as .includes as arguments
+    For examples
+    let arr = [1, 0, false];
+    alert( arr.indexOf(0) ); // 1
+    alert( arr.indexOf(false) ); // 2
+    alert( arr.indexOf(null) ); // -1
+    alert( arr.includes(1) ); // true
+
+There also arr.lastIndexOf that searches from end of the array.
+
+
+## Searching in array of objects
+
+# arr.find() and arr.findIndex()
+
+Inside an array made up of objects if we need to find one with specific conditions we use find
+.find()
+
+.find(fn) , expects an functions an input with 3 arguments item,index,array
+
+item is the current element 
+index is it's index
+array is the array itself
+
+it's kind of like the .reduce method we learnt last lesson although single parameter is often pass ie the current item
+
+For example
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+  ];
+let user = users.find(item => item.id == 1); // single parameter is recived as the current item 
+alert(user.name); // John
+
+.find when conditions are met it returns the current item found. if not it countiues looping untill the end
+
+.findIndex has the same syntax just returns the index if the element was found else returns -1 .
+
+# Sorting
+.sort sorts inplace so the original array is effected and rearranged.
+
+.sort method by default converts all elements as string even if they are not and then applies sorting method .
+Therefore sorting arrays of string type do not require any extra steps .
+Sorting array of integers in javascript is different from what we use in other programming language like python that can auto-detect array of integers and sort it .
+To sort array of integers in javascript we need to pass a Three-way comparison functions to the sort method.
+Something like this 
+let arr = [5,2,1,3,4]
+arr.sort((a,b)=> { // This is a shorthand version and only recommended for integers sorting 
+    return a-b;
+})
+
+or 
+
+let arr = [
+{name:rika, age:20}
+{name:chika, age: 24}
+{name:lika, age:17}
+]
+
+function compare(a, b) { // This is writing the function separately and this way is recommended for object sorting . 
+  if (a.age > b.age) return 1; // if the first value is greater than the second
+  if (a.age == b.age) return 0; // if values are equal
+  if (a.age < b.age) return -1; // if the first value is less than the second
+}
+console.log(arr.sort(compare))
+A three-way comparison operation compares two values A and B, determining if A < B, A = B, or A > B in a single operation.
+Actually, a comparison function is only required to return a positive number to say “greater” and a negative number to say “less”.
+if the return value is greater(>0) than SWAP happens yes internally it swaps the elements 
+if the return value is less (<0) than don't SWAP as the elements are already sorted .
+The swapping continues untill every comparison outputs -1 i.e the array becomes sorted .
+
+# reverse method 
+
+It does not takes any arguments and reverse the array inplace so original array is changed.
+
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+alert( arr ); // 5,4,3,2,1
+
+# split and join
+.split is a string method .
+.split can accept 2 parameters although the we only use 1. The first parameter is the delimter and the second is limit of array length
+.split is used to convert a string of data separated by something we call delimter . A delimter can be anything but normally it is a comma.
+For example 
+let student = "Ram , Sayam, Jam" 
+let array_of_students = student.split(','); 
+for(let name of array_of_students){
+    console.log(`Hello ${name}!`);
+}
+.split without any delimitor will split the string of words into letters
+For example
+let str = "test";
+alert( str.split('') ); // t,e,s,t
+
+.join is exact opposite of split. .joins joins an ARRAY and converts it into a string
+.join(glue) joins the array with glue , where glue is our separater 
+For example 
+let arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+let str = arr.join(';'); // glue the array into a string using ;
+alert(str); // Bilbo;Gandalf;Nazgul
+
+# array.isArray
+typeof does not distingush between a array[] and a object{} 
+
+alert(typeof {}); // object
+alert(typeof []); // object (same)
+
+Array.isArray returns bool and properly distingush between a array and object
+
+alert(Array.isArray({})); // false
+alert(Array.isArray([])); // true
+
+# Most methods support “thisArg”
+Almost all array methods that call functions – like find, filter, map, with a notable exception of sort, accept an optional additional parameter thisArg.
+
+
+The context explains how many array methods in JavaScript, like find, filter, and map, can accept an optional parameter called thisArg. This parameter allows you to specify the context (or the value of this) for the function you are using.
+For example, here we use a method of army object as a filter, and thisArg passes the context:
+
+let army = {
+  minAge: 18,
+  maxAge: 27,
+  canJoin(user) {
+    return user.age >= this.minAge && user.age < this.maxAge; // this here refers to army object and user refers to the object will be passed at runtime
+  }
+};
+
+let users = [
+  {age: 16},
+  {age: 20},
+  {age: 23},
+  {age: 30}
+];
+
+// find users, for who army.canJoin returns true
+let soldiers = users.filter(army.canJoin, army);
+
+alert(soldiers.length); // 2
+alert(soldiers[0].age); // 20
+alert(soldiers[1].age); // 23
+
+Typically, when you call a function from an object, you might need it to recognize the object it belongs to. For example, in the given example, there is an army object that has a method called canJoin, which checks if a user is eligible to join based on their age.
+
+Here's how it works:
+
+You have an array of users with different ages.
+You can use the filter method to find users who can join the army by passing the canJoin method and the army object as thisArg.
+This way, the canJoin method will use the properties of the army object correctly.
+If you didn't provide thisArg, the method would not work properly since it might lose track of its context (the army object) and could lead to an error.
+
+Alternatively, you could achieve the same result by using an arrow function, which is often clearer and easier to understand: users.filter(user => army.canJoin(user)).
+
+In summary, thisArg helps ensure that functions operate in the correct context when using array methods.
+
+
